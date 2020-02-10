@@ -5,9 +5,20 @@
 ## [setTimeout()](https://www.w3schools.com/jsref/met_win_settimeout.asp)
 
 ```js
-// Example
 
-```
+//Example
+
+setTimeout(function() {
+    console.log("HELLO");
+}, 3000)                           // Value in this context is in milliseconds.
+
+
+setInterval(function() {
+    console.log("hi");
+}, 1000)                      // Prints 'hi' every 1000 ms, forever!!!
+
+clearInterval(myTimer);      // Stops an interval-based event when you're done with it.
+
 
 ---
 

@@ -100,11 +100,14 @@ Instead, we will use these methods
 
 You can modify the content of a leaf, an end node with 
 
-- [`.innerText()`](https://www.w3schools.com/jsref/prop_node_innertext.asp)
-- [`.innerHTML()`](https://www.w3schools.com/jsref/prop_html_innerhtml.asp) 
+- [`.innerText`](https://www.w3schools.com/jsref/prop_node_innertext.asp)
+- [`.innerHTML`](https://www.w3schools.com/jsref/prop_html_innerhtml.asp) 
 
 ```js
 // Example
+
+const myTitle = document.getelementById('my-title');
+myTitle.innerText = 'New Title';
 
 ```
 
@@ -126,7 +129,11 @@ To add a new node to an HTML page, you need to do it in 3 steps.
 - [`.appendChild()`](https://www.w3schools.com/jsref/met_document_createelement.asp)
 
 ```js
-// Example
+
+const paragraph = document.createElement('p');    // Create new (empty) node
+paragraph.innerText = "new hacker right here."   // Add content to new node (innerText = content(?))
+document.querySelector('body').appendChild(paragraph);  // Add the node to the DOM
+paragraph.id - "new-id";                               // Give your new content an id so you can target it later on.
 
 ```
 
@@ -152,6 +159,9 @@ We can style elements from JavaScript.
 const myDiv = document.getElementById('my-div');
 
 myDiv.style.background = "purple";
+myDiv.style.borderRadius = "32px";    //  One key thing to note: JS doesn't react well to the conventional '-' dash'
+                                      //  So we use camelCasing instead for giving instructions and the DOM understands
+                                      //  This and converts it to a dash for its purposes.
 ```
 
 ⚠️ Houston. We have a problem!
@@ -178,11 +188,11 @@ To modify a `classList`, we have a few methods we can call.
 
 ```js
 // Example
-myDiv.classList.add('primary');
+myDiv.classList.add('primary');      //  Adding a class with JS so some CSS rules apply where they didn't before...
 
-myDiv.classList.remove('secondary');
+myDiv.classList.remove('secondary'); //  Removing a class with JS so some CSS rules DON't apply where they once did...
 
-myDiv.classList.toggle('active');
+myDiv.classList.toggle('active');    //  Using JS to activate/deactivate CSS features.
 ```
 ---
 
