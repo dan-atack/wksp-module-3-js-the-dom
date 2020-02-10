@@ -14,12 +14,13 @@ for (let laneNum = 1; laneNum <= FROGS; laneNum++) {    // for every number up t
     document.querySelector(`.Lane-${laneNum}`).appendChild(spanner);    // span is added to lane
 };  // SWEET JESUS!
 
+let racers = [];
 
+for (let i = 1; i <= FROGS; i++) {
+    racers.push(frogStable[i]);
+};
 
-//let spanner = document.createElement("span");
-//spanner.innerText = identity;
-
-//document.querySelector("li").appendChild(spanner);
-  //  spanner.id = identity;
-    //spanner.innerText = identity;
+//let testline = document.createElement("h2");   // console.log was being a drag so I made this to verify that I did in fact have some frogs.
+//testline.innerText = `${racers[2].name}`;
+//document.querySelector(".main").appendChild(testline);
 
